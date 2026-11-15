@@ -1,1 +1,65 @@
 /* TODO: build .dashboard with CSS Grid and grid-template-areas to match the mockup */
+
+body {
+    margin: 0;
+    background-color: #f7f7f8;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 134px);
+    grid-template-areas:
+        "chart chart users sessions"
+        "chart chart conversion average";
+    gap: 19px;
+    padding: 31px;
+}
+
+.panel.chart-panel {
+    grid-area: chart;
+    border: 1px solid #e1e4e8;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel.chart-panel::after {
+    content: "";
+    display: block;
+    flex: 1;
+    margin-top: 12px;
+    border-radius: 8px;
+    background: rgb(200, 200, 130);
+}
+
+
+.panel.stat-tile {
+    border: 1px solid #e1e4e8;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.dashboard > .stat-tile:nth-child(2) {
+    grid-area: users;
+}
+
+.dashboard > .stat-tile:nth-child(3) {
+    grid-area: sessions;
+}
+
+.dashboard > .stat-tile:nth-child(4) {
+    grid-area: conversion;
+}
+
+.dashboard > .stat-tile:nth-child(5) {
+    grid-area: average;
+}

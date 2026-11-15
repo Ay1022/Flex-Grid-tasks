@@ -1,1 +1,58 @@
 /* TODO: build .page-layout to match the mockup */
+*{
+    margin: 0;
+}
+
+.page-layout{
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+    "header header header"
+    "nav content aside"
+    "footer footer footer";
+
+    min-height: 100vh;
+}
+
+.site-header{
+    grid-area: header;
+    background-color: #0d1836;
+    color: white;
+    padding: 20px;
+}
+
+.side-nav{
+  grid-area: nav;
+  background-color: #17365e;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.side-nav a{
+    text-decoration: none;
+    color: white;
+
+}
+.content {
+  grid-area: content;
+  background-color: #f8fafc;
+  padding: 20px;
+}
+
+
+.sidebar {
+  grid-area: aside;
+  background-color: #e0f2fe;
+  padding: 20px;
+}
+
+
+.site-footer {
+  grid-area: footer;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 20px;
+}

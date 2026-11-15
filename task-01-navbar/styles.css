@@ -1,1 +1,35 @@
 /* TODO: build .site-header and .nav with Flexbox to match the mockup */
+*{
+    margin: 0;
+}
+.site-header{
+    background-color: rgb(22, 22, 69);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 31px;
+    
+    
+    
+}
+.nav{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+    
+
+}
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+
+}
